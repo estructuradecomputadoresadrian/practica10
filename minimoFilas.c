@@ -23,7 +23,7 @@ int main(){
 	free(matriz);
 	printf("\n");
 	int contadoraux=1;
-	for (int i = 0; i < columnas; i++){
+	for (int i = 0; i < filas; i++){
 		printf("El valor minimo de la fila %d es %d.\n", contadoraux, *(vectormin+i));
 		contadoraux++;
 	}
@@ -53,7 +53,7 @@ void printmatriz(int *matrizp, int filasp, int columnasp){
 void filaminima(int *matrizf, int *vectorminf, int columnasf, int filasf){
 	for (int j = 0; j < columnasf; j++){
 		*(vectorminf+j)=*(matrizf+j*filasf);
-		for (int i = 0; i < columnasf; i++){
+		for (int i = 0; i < filasf; i++){
 			if (*(matrizf+i*filasf+j)<*(vectorminf+j)){
 				*(vectorminf+j)=*(matrizf+i*filasf+j);
 			}		
